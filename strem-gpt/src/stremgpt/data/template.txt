@@ -1,0 +1,39 @@
+Positive Example:
+Input: "Find a frame that contains a car."
+Output: "[[:car:]]"
+
+Positive Example:
+Input: "Find a frame that contains a car followed by a pedestrian."
+Output: "[[:car:]][[:pedestrian:]]"
+
+Positive Example:
+Input: "Find either a frame with a car or a frame with a truck."
+Output: "([[:car:]]|[[:truck:]])"
+
+Positive Example:
+Input: "Find a frame with either a car or truck."
+Output: "[[:car:]|[:truck:]]"
+
+Positive Example:
+Input: "Find a frame with a sign zero or more times."
+Output: "[[:sign:]]*"
+
+Postive Example:
+Input: "Find a frame with a car and animal for one or more times."
+Output: "[[:car:] & [:animal:]]{1,}"
+
+Positive Example:
+Input: "Find exactly five frames that contain a car."
+Output: "[[:car:]]{5}"
+
+Positive Example:
+Input: "Find 5 to 25 frames where a bus and truck exist."
+Output: "[[:bus:] & [:truck:]]{5,25}"
+
+Positive Example:
+Input: "Find a frame where a car and pedestrian intersect."
+Output: "[<NONEMPTY>([:car:] & [:pedestrian:])]"
+
+Positive Example:
+Input: "Find a frame where the bounding boxes of car and pedestrian intersect zero or more times followed by a car or bus intersecting with a pedestrian for 1 to 10 times."
+Output: "[<NONEMPTY>([:car:] & [:pedestrian:])]*[<NONEMPTY>(([:car:] | [:bus:]) & [:pedestrian:])]{1,10}"

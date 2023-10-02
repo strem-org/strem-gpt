@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "stremgpt"
+version = "0.1.0"
+description = "A natural language-based support bridge between OpenAI's ChatGPT and the perception querying tool, STREM."
+authors = ["Jacob Anderson <jacob.anderson@toyota.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+openai = "^0.27.8"
+click = "^8.1.4"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.4.1"
+black = "^23.3.0"
+isort = "^5.12.0"
+Sphinx = "^7.0.1"
+
+[tool.poetry.scripts]
+strem-gpt = "stremgpt.bin.stremgpt.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
